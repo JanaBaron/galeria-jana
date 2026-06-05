@@ -162,8 +162,8 @@ export default function App() {
 
   // ── SUBMIT SELECTION ────────────────────────────────────────────────────────
   const submitSelection = () => {
-    if (selected.length === 0)
-      return showToast("Selecione ao menos uma foto.", "error");
+    if (selected.length < 10)
+      return showToast("Selecione no mínimo 10 fotos.", "error");
 
     setSessions((prev) =>
       prev.map((s) =>
